@@ -14,6 +14,12 @@ function displayAnswer () {
   
   	// initialize variables (answer)
 	let answer = ""
+
+  let sizes = 0
+  let barbecue = 1
+  let ketchup = 1
+  let drink = 0
+  
 	
 	// get user input (what size they would like)
 	let size = parseInt(document.getElementById('size').value)
@@ -26,30 +32,46 @@ function displayAnswer () {
   
    // determine the answer based on what size and sauce the user chose and whether or not they want a drink
 
-    if () {
-
-        answer = ""
+    if (sizes=="5piece") {
+      sizes = 10
 
     }
 
-    else if () {
-
-        answer = ""
+    else if (sizes=="8piece") {
+      sizes = 16
 
     }  
 
-	else if () {
+	else if (sizes=="10piece") {
+      sizes = 20
+    
+    }
 
-        answer = ""
+  if (drink=="yes") {
+      drink = 3
+    
     }
 
   else {
-
-        answer = ""
-
+      drink = 0
+    
     }
 
+  if (sauce=="barbecue") {
+      sauce = 1
+    
+    }
 
+  else if (sauce=="ketchup") {
+      sauce = 1
+    
+    }
+  else {
+      sauce = 0
+    
+    }
+
+  
   // display the results 
   document.getElementById('answer').innerHTML = answer
 
