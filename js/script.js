@@ -24,6 +24,14 @@ function displayAnswer () {
   let size = selectSize.options[selectSize.selectedIndex].value
 
   // get user input (what sauce they would like)
+	let selectSauce = document.getElementById('sauce')
+  let sauce = selectSauce.options[selectSauce.selectedIndex].value
+
+  // get user input (would they like a drink)
+	let selectDrink = document.getElementById('drink')
+  let drink = selectDrink.options[selectDrink.selectedIndex].value
+
+  // get user input (what sauce they would like)
 	let sauce = parseInt(document.getElementById('sauce').value)
 
   // get user input (would they like a drink)
