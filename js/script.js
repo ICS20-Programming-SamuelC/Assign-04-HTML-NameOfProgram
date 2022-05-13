@@ -14,65 +14,53 @@ function displayAnswer () {
   
   	// initialize variables (answer)
 	let answer = ""
-
-  let sizes = 0
-  let barbecue = 1
-  let ketchup = 1
-  let drink = 0
+  let sizePrice = 0
+  let saucePrice = 0
+  let drinkPrice = 0
   
 	
 	// get user input (what size they would like)
-	let size = parseInt(document.getElementById('size').value)
+	let selectSize = document.getElementById('size')
+  let size = selectSize.options[selectSize.selectedIndex].value
 
-  // get user input (what size they would like)
+  // get user input (what sauce they would like)
 	let sauce = parseInt(document.getElementById('sauce').value)
 
   // get user input (would they like a drink)
 	let drink = parseInt(document.getElementById('drink').value)
   
-   // determine the answer based on what size and sauce the user chose and whether or not they want a drink
-
-    if (sizes=="5piece") {
-      sizes = 10
-
+   // Determine the cost of the size they chose
+    if (size =="5piece") {
+      sizePrice = 10
     }
-
-    else if (sizes=="8piece") {
-      sizes = 16
-
+    else if (size == "8piece") {
+      sizePrice = 16
     }  
-
-	else if (sizes=="10piece") {
-      sizes = 20
-    
+	  else if (size=="10piece") {
+      sizePrice = 20
     }
-
-  if (drink=="yes") {
-      drink = 3
-    
+   // Determine the cost of the sauce they chose  
+    if (sauce=="barbecue") {
+        saucePrice = 1
     }
-
-  else {
-      drink = 0
-    
+    else if (sauce=="ketchup") {
+        saucePrice = 1
     }
-
-  if (sauce=="barbecue") {
-      sauce = 1
-    
+    else {
+        saucePrice = 0
     }
-
-  else if (sauce=="ketchup") {
-      sauce = 1
-    
+     // Determine the cost of the drink they chose  
+    if (drink=="yes") {
+        drinkPrice = 3
     }
-  else {
-      sauce = 0
-    
+    else {
+        drinkPrice = 0 
     }
+let subtotal = sizePrice + saucePrice + drinkPrice
+let tax = subtotal * 0.13
+let total = subtotal + tax
 
   
   // display the results 
-  document.getElementById('answer').innerHTML = answer
-
+  document.getElementById('answer').innerHTML = total
 }
