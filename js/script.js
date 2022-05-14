@@ -31,6 +31,9 @@ function displayAnswer () {
 	let selectDrink = document.getElementById('drink')
   let drink = selectDrink.options[selectDrink.selectedIndex].value
 
+  // get user input (what size they would like)
+	let size = parseInt(document.getElementById('size').value)
+  
   // get user input (what sauce they would like)
 	let sauce = parseInt(document.getElementById('sauce').value)
 
@@ -71,21 +74,21 @@ let total = subtotal + tax
   
   // display the results 
   document.getElementById('answer').innerHTML = subtotal
-
+  
   // output display users subtotal
-  document.getElementById('subtotal').innerHTML = 'Your sub total is ' + (sizePrice + saucePrice + drinkPrice).toFixed(2) + ' dollars. '
+  document.getElementById('subtotal').innerHTML = 'Your sub total is ' + subtotal.toFixed(2) + ' dollars. '
 
-
+  
   // display the results 
   document.getElementById('answer').innerHTML = tax
 
   // output display users tax
-  document.getElementById('tax').innerHTML = 'Your tax is ' + ((sizePrice + saucePrice + drinkPrice)*0.13).toFixed(2) ' dollars. '
+  document.getElementById('tax').innerHTML = 'Your tax is ' + tax.toFixed(2) + ' dollars. '
 
 
   // display the results 
   document.getElementById('answer').innerHTML = total
 
   // output display users total
-  document.getElementById('total').innerHTML = 'Your total is ' + (subtotal + tax).toFixed(2) ' dollars. '
+  document.getElementById('total').innerHTML = 'Your total is ' + total.toFixed(2) + ' dollars. '
 }
