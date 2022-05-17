@@ -1,7 +1,7 @@
 // Copyright (c) 2022 Samuel Carlson All rights reserved
 //
 // Created by: Samuel Carlson
-// Created on: April 2022
+// Created on: May 2022
 // This file contains the JS functions for index.html
 
 "use strict"
