@@ -10,7 +10,7 @@
 /**
  * This function displays the users total based on what they ordered
  */
-function displayAnswer () {
+function displayAnswer() {
   
   	// initialize variables (answer)
 	let answer = ""
@@ -30,16 +30,7 @@ function displayAnswer () {
   // get user input (would they like a drink)
 	let selectDrink = document.getElementById('drink')
   let drink = selectDrink.options[selectDrink.selectedIndex].value
-
-  // get user input (what size they would like)
-	let size = parseInt(document.getElementById('size').value)
-  
-  // get user input (what sauce they would like)
-	let sauce = parseInt(document.getElementById('sauce').value)
-
-  // get user input (would they like a drink)
-	let drink = parseInt(document.getElementById('drink').value)
-  
+ 
    // Determine the cost of the size they chose
     if (size =="5piece") {
       sizePrice = 10
@@ -70,25 +61,13 @@ function displayAnswer () {
 let subtotal = sizePrice + saucePrice + drinkPrice
 let tax = subtotal * 0.13
 let total = subtotal + tax
-
-  
-  // display the results 
-  document.getElementById('answer').innerHTML = subtotal
   
   // output display users subtotal
-  document.getElementById('subtotal').innerHTML = 'Your sub total is ' + subtotal.toFixed(2) + ' dollars. '
-
-  
-  // display the results 
-  document.getElementById('answer').innerHTML = tax
+  document.getElementById('subtotal').innerHTML = 'Your sub total is $' + subtotal.toFixed(2) + '.'
 
   // output display users tax
-  document.getElementById('tax').innerHTML = 'Your tax is ' + tax.toFixed(2) + ' dollars. '
-
-
-  // display the results 
-  document.getElementById('answer').innerHTML = total
+  document.getElementById('tax').innerHTML = 'Your tax is $' + tax.toFixed(2) + '.'
 
   // output display users total
-  document.getElementById('total').innerHTML = 'Your total is ' + total.toFixed(2) + ' dollars. '
+  document.getElementById('total').innerHTML = 'Your total is $' + total.toFixed(2) + '.'
 }
